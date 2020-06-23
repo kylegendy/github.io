@@ -1,0 +1,110 @@
+:root{ font-size: 62.5%; }
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; }
+
+/* anything smaller */
+@media only screen and (min-width: 0px){
+    #outmostBox { width: 28rem; }
+        .bottomTopLinks .text, header nav a { font-size: 3.054rem; }
+        header { margin-top: 2rem; }
+            header h1 a { font-size: 7.968rem; }
+            header nav { margin-top: 1rem; }
+                header nav .notLast { margin-right: 3.5rem; }
+                .top-nav .dropdwn > .spanItem { display: none; }
+            footer #bottomLinks .notLast { margin-bottom: 1.15rem; }
+}
+
+/* iphone 8 */ 
+@media only screen and (min-width: 980px){
+    #outmostBox { width: 75rem; }
+        header nav { margin-top: 1rem; }
+            header nav .notLast { margin-right: 4.75rem; }
+        footer #bottomLinks .notLast { margin-bottom: 2rem; }
+}
+
+/* iphone 11 */
+@media only screen and (min-width: 980px) and (min-height: 1646px){
+    header { margin-top: 6rem; }
+        header nav { margin-top: 4rem; }
+    footer #bottomLinks { margin-top: 5rem; }
+}
+
+/* ipad air 2 */
+@media only screen and (min-width: 1024px){
+    #outmostBox { width: 70rem; }
+        header h1 a { font-size: 4rem; }
+        header nav .notLast { margin-right: 3rem; }
+        .bottomTopLinks .text, header nav a { font-size: 1.25rem; }
+}
+
+/* desktop */
+@media only screen and (min-width: 1500px){
+    #outmostBox { width: 80rem; }
+        header { margin-top: rem; }
+        .bottomTopLinks .text, header nav a { font-size: 1.45rem; }
+        .top-nav .dropdwn > .spanItem { display: block; }
+        .top-nav .dropdwn > .buttItem { display: none; }
+        header h1 a { font-size: 4rem; }
+}
+
+#outmostBox {
+    margin: 0;
+    padding: 0;
+    justify-items: center;
+    display: grid; }
+    header {
+        justify-items: center;
+        display: grid; }
+        header h1 { margin-bottom: 0; }
+        .dropNav * { 
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box; }
+            nav, .dropNav { 
+                width: 100%;
+                position: relative;
+                z-index: 4; }
+              .dropNav .top-nav {
+                  display: flex;
+                  justify-content: center;
+                  padding: 0;
+                  font-size: 0; /* eliminates whitespace from inline-block*/ }
+                  .top-nav div {
+                      display: inline-block; /* blocks just line up without floats */
+                      position: relative; /* sets positioning context for 2nd level menu */
+                      width: inherit; }
+                  .top-nav button { border: none; }
+                  .top-nav button:focus { outline: 0; }
+                      .top-nav .text, .top-nav .sub-nav a {
+                          text-align: center; /* centeres the text horizontally */
+                          display: block; /* links now fill the block*/
+                          padding: 10px 20px; }
+                      .top-nav .text { text-decoration: underline; }
+                      .top-nav .text:hover,
+                      .top-nav .sub-nav span > a:hover { background-color: rgba(228, 228, 228, 0.39); }
+                      .top-nav .sub-nav {
+                          /* positions the menu UNDER the list item*/
+                          position: absolute;
+                          width: 100%;
+                          /* hides the menu until needed */
+                          visibility: hidden; 
+                          padding: 0; }
+                  .top-nav div:hover .sub-nav{
+                      /* shows the submenu when the list item is hovered */
+                      visibility: visible; 
+                      box-shadow: 0 5px 4px rgba(0, 0, 0, 0.2), 0 11px 10px rgba(0, 0, 0, 0.19);
+                      border-bottom-right-radius:5px;
+                      border-bottom-left-radius:5px; }
+                          .top-nav .sub-nav div {
+                              background-color: white; 
+                              width: 100%; }
+                          .top-nav .bottomItem {
+                              border-bottom-right-radius:5px;
+                              border-bottom-left-radius:5px; }
+                              
+    #bottomLinks { padding-left: 0; }
+    #bottomLinks li, #bottomLinks a { list-style-type: none; }

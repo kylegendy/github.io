@@ -1,0 +1,35 @@
+@font-face{
+    /* brought to you by google! */
+    font-family: "sedgwick";
+    src: url("../fonts/Sedgwick_Ave/SedgwickAve.ttf")
+        format('truetype'); }
+@font-face{
+    /* brought to you by google! */
+    font-family: "alegreyaRegular";
+    src: url("../fonts/Alegreya_SC/AlegreyaSC-Regular.ttf")
+        format('truetype'); }
+@font-face{
+    /* brought to you by google! */
+    font-family: "karla";
+    src: url("../fonts/Karla/Karla-Regular.ttf")
+        format('truetype'); }
+
+* {
+    font-family: karla;
+    color: rgb(88, 88, 88); }
+
+header h1 a { 
+    font-family: sedgwick;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    color: rgb(138, 138, 138); }
+
+.bottomTopLinks .text {
+    font-family: alegreyaRegular;
+    font-style: normal;
+    font-weight: normal; }
+
+footer #bottomLinks a { text-decoration: none; }
+
+.top-nav .sub-nav a { text-decoration: none; }

@@ -1,0 +1,63 @@
+@import "general/layout.css"; 
+@import "general/typography.css"; 
+
+@media only screen and (min-width: 0px){
+	#picHolder { margin-top: 13rem; }	
+        .portrait { max-width: 70%; max-height: auto; }	
+        p { 	
+            margin-top: 5rem; 	
+            width: 30rem;	
+            font-size: 3rem;	
+        }	
+        #bottomLinks { margin-top: 20rem; }	
+}
+/* iphone 8 */ 
+@media only screen and (min-width: 980px){
+        #bottomLinks { margin-top: 6rem; }
+}
+/* iphone 11 */
+@media only screen and (min-width: 980px) and (min-height: 1646px){
+        #picHolder { margin-top: 18rem; }	
+        .portrait { max-width: 70%; max-height: auto; }	
+        p { 	
+            margin-top: 5rem; 	
+            width: 30rem;	
+            font-size: 3rem;	
+        }	
+        #bottomLinks { margin-top: 15rem; }
+}
+/* ipad air 2 */
+@media only screen and (min-width: 1024px){
+	#picHolder { margin-top: 15rem; }	
+        .portrait { max-width: 30%; max-height: auto; }	
+        p { 	
+            margin-top: 4rem; 	
+            width: 15rem;	
+            font-size: 1.5rem;	
+        }	
+        #bottomLinks { margin-top: 20rem; }
+}
+/* desktop */
+@media only screen and (min-width: 1500px){
+	    p { 	
+            margin-top: 4rem; 	
+            width: 15rem;	
+            font-size: 1.25rem;	
+        }	
+        #bottomLinks { margin-top: 10rem; }
+}
+
+
+    p{
+        font-family: karla;
+        font-style: normal;
+        font-weight: normal;
+        color: rgb(88, 88, 88);
+        text-align: center;
+    }
+
+        #picHolder
+        {
+            justify-items: center;
+            display: grid;
+        }
