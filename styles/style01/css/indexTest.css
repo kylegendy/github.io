@@ -1,0 +1,28 @@
+@import "general/layout.css"; 
+@import "general/typography.css"; 
+
+/* anything smaller */
+@media only screen and (min-width: 0px){
+    #picHolder { margin-top: 2rem; }
+    #bottomLinks { margin-top: 1rem; }
+}
+
+/* iphone 8 */ 
+@media only screen and (min-width: 980px){
+    #bottomLinks { margin-top: 3rem; }
+}
+
+/* iphone 11 */
+@media only screen and (min-width: 980px) and (min-height: 1646px){
+    #bottomLinks { margin-top: 5rem; }
+}
+
+/* desktop */
+@media only screen and (min-width: 1500px){
+    #picHolder { margin-top: 1rem; }
+    #bottomLinks { margin-top: 4rem; }
+}
+
+.homeImage {
+    max-width: 100%;
+    max-height: auto; }

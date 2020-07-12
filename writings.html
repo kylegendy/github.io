@@ -9,6 +9,33 @@
 
 
 <body>
+
+  <!-- FIREBASE -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAdZrFit4BgnlmHk-8RMk7hAqyLCIEbgiY",
+        authDomain: "personalsite-cbc05.firebaseapp.com",
+        databaseURL: "https://personalsite-cbc05.firebaseio.com",
+        projectId: "personalsite-cbc05",
+        storageBucket: "personalsite-cbc05.appspot.com",
+        messagingSenderId: "681080614448",
+        appId: "1:681080614448:web:67cb9e6c0a2212b59b47f5",
+        measurementId: "G-GNJEBH1C45"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+  <!-- END-FIREBASE -->
+
   <div id="outmostBox">
 
     <header>

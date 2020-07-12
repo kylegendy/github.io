@@ -1,0 +1,159 @@
+/* anything smaller */
+@media only screen and (min-width: 0px){
+  #bottomLinks { margin-top: 1rem; }
+}
+
+/* iphone 8 */ 
+@media only screen and (min-width: 980px){
+  #bottomLinks { margin-top: 3rem; }
+}
+
+/* iphone 11 */
+@media only screen and (min-width: 980px) and (min-height: 1646px){
+  #bottomLinks { margin-top: 5rem; }
+}
+
+/* desktop */
+@media only screen and (min-width: 1500px){
+  #bottomLinks { margin-top: 4rem; }
+}
+
+.container *,
+.container *:after,
+.container *:before {
+  box-sizing: border-box;
+}
+
+.container .dropSelectWrap {
+  display: flex;
+  text-align: center; /* centeres the text horizontally */
+  width: 300px;
+  border-width: thick;
+  border-color: blue;
+  border-style: solid;
+}
+
+.dropSelectWrap > div {
+  display: inline-block;
+  position: relative;
+  max-width: 50%;
+}
+
+.container .selectName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  user-select: none;
+  border-width: thick;
+  border-color: red;
+  border-style: none solid none none;
+  background-color: rgba(228, 228, 228, 0.39); 
+}
+
+.dropSelectWrap {
+  position: relative;
+  user-select: none;
+}
+
+.dropSelect {
+  display: flex;
+  flex-direction: column;
+  border-width: 0;
+}
+
+.dropSelectWrap > div {
+  display: inline-block; /* blocks just line up without floats */
+  position: relative; /* sets positioning context for 2nd level menu */
+  width: 50%;
+  height: 60px;
+}
+
+.dropSelectTrig {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  color: rgba(83, 83, 83, 1);
+  line-height: 60px;
+  background-color: rgba(228, 228, 228, 0.39);
+  cursor: pointer;
+  border-width: 0;
+}
+
+.dropSelectOptions {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: none;
+  background: white;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.dropSelect.open .dropSelectOptions {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropSelectOption {
+  position: relative;
+  display: block;
+  padding: 0 22px 0 22px;
+
+  color: rgba(83, 83, 83, 1);
+  line-height: 60px;
+  cursor: pointer;
+}
+
+.dropSelectOption:hover {
+  cursor: pointer;
+  background-color: rgba(228, 228, 228, 0.39);
+}
+
+.dropSelectOption .dropSelectChosen {
+  color: white;
+  background-color: rgb(149, 189, 204);
+}
+
+.arrow {
+  position: relative;
+  height: 15px;
+  width: 15px;
+}
+
+.arrow::before,
+.arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 0.15rem;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.arrow::before {
+  left: -5px;
+  transform: rotate(45deg);
+  background-color: #394a6d;
+}
+
+.arrow::after {
+  left: 5px;
+  transform: rotate(-45deg);
+  background-color: #394a6d;
+}
+
+.open .arrow::before {
+  left: -5px;
+  transform: rotate(-45deg);
+}
+
+.open .arrow::after {
+  left: 5px;
+  transform: rotate(45deg);
+}
