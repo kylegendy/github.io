@@ -12,7 +12,27 @@
   <div id="outmostBox">
 
     <header>
-      <h1><a href="specLog.html">log in to continue</a></h1>
+      <h1><a href="adminLoggedIn.html">website input</a></h1>
+
+      <nav class="bottomTopLinks">
+        <div class="dropNav">
+          <div class="top-nav">
+
+            <div class="notLast"><span><a class="text" href="#">writings</a></span></div>
+
+            <div class="notLast"><span><a class="text" href="#">projects</a></span></div>
+
+            <div class="dropdwn"><span class="text spanItem">creative</span><button class="text buttItem">creative</button>
+               <div class="sub-nav">
+                 <div><span><a href="#">photos</a></span></div>
+                 <div class="bottomItem"><span><a class="bottomItem" href="#">music</a></span></div>
+               </div>
+            </div>
+
+          </div>
+        </div>
+      </nav>
+
     </header>
 
     <!--region FIREBASE -->
@@ -45,34 +65,7 @@
 
     <!-- new code below this line -->
 
-    <!-- initializes sign-in widget ui from firebase -->
-    <script src="https://www.gstatic.com/firebasejs/ui/4.5.2/firebase-ui-auth.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.5.2/firebase-ui-auth.css" />
-    <script type="text/javascript">
-      // FirebaseUI config.
-      var uiConfig = {
-        signInSuccessUrl: 'admin/adminLoggedIn.html',
-        signInOptions: [
-          // Leave the lines as is for the providers you want to offer your users.
-          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-          firebase.auth.EmailAuthProvider.PROVIDER_ID
-        ],
-        // tosUrl and privacyPolicyUrl accept either url string or a callback
-        // function.
-        // Terms of service url/callback.
-        tosUrl: '<your-tos-url>',
-        // Privacy policy url/callback.
-        privacyPolicyUrl: function() {
-          window.location.assign('<your-privacy-policy-url>');
-        }
-      };
-
-      // Initialize the FirebaseUI Widget using Firebase.
-      var ui = new firebaseui.auth.AuthUI(firebase.auth());
-      // The start method will wait until the DOM is loaded.
-      ui.start('#firebaseui-auth-container', uiConfig);
-    </script>
-
+    
     <!-- new code above this line -->
     
   </div>
